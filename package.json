@@ -121,9 +121,7 @@
     "uuid": "^3.3.2",
     "warning": "3.0.0",
     "whatwg-fetch": "2.0.3",
-    "yup": "0.26.7"
-  },
-  "devDependencies": {
+    "yup": "0.26.7",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/runtime": "^7.3.1",
