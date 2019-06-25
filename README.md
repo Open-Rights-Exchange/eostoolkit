@@ -8,3 +8,11 @@
 5.  Run `npm run build` to build the deployable package.
 
 Now you're ready to rumble!
+
+
+### Deploy to Google Cloud
+
+```
+gcloud config set project open-rights-exchange
+gcloud -q app deploy app.yaml
+```
