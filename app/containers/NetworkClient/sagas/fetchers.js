@@ -3,6 +3,7 @@ import Ping from 'utils/ping';
 import { orderBy } from 'lodash';
 import { put, all, join, fork, select, call, spawn } from 'redux-saga/effects';
 import { tokensUrl, networksUrl, claimsUrl } from 'remoteConfig';
+import networksFromFile from '../../../networks.json';
 
 import { loadedNetworks, updateNetworks, loadedAccount, setNetwork } from '../actions';
 import { makeSelectIdentity, makeSelectReader, makeSelectTokens, makeSelectNetworks, makeSelectActiveNetwork } from '../selectors';
@@ -18,8 +19,9 @@ import { makeSelectIdentity, makeSelectReader, makeSelectTokens, makeSelectNetwo
 export function* fetchNetworks() {
   try {
     // fetch the remote network list
-    const data = yield fetch(networksUrl);
-    const rawNetworks = yield data.json();
+    // const data = yield fetch(networksUrl);
+    // const rawNetworks = yield data.json();
+    const rawNetworks = networksFromFile;
 
     const networks = rawNetworks.map(network => {
       const { endpoints, ...networkDetails } = network;

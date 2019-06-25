@@ -1,0 +1,72 @@
+[
+    {
+      "name": "EOS Mainnet",
+      "description": "The EOS Mainnet",
+      "owner": "The EOS community",
+      "chainId": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+      "type": "mainnet",
+      "prefix":"EOS",
+      "network": "eos",
+      "endpoints": [
+        {
+          "name": "Greymass",
+          "protocol": "https",
+          "port": 443,
+          "url": "eos.greymass.com",
+          "description": "API Node"
+        },      {
+          "name": "EOS API PROXY",
+          "protocol": "https",
+          "port": 443,
+          "url": "proxy.eosnode.tools",
+          "description": "API Node"
+        },
+        {
+          "name": "GenerEOS",
+          "protocol": "https",
+          "port": 443,
+          "url": "mainnet.genereos.io",
+          "description": "Public node provided by GenerEOS"
+        }
+      ]
+    },
+      {
+        "name": "ORE Mainnet",
+        "description": "The ORE Mainnet",
+        "owner": "AIKON",
+        "chainId": "7900eaca71d5b213d3e1e15d54d98ad235a7a5b8166361be78e672edeeb2b47a",
+        "type": "mainnet",
+        "prefix":"EOS",
+        "network": "eos",
+        "endpoints": [
+          {
+            "name": "AIKON ORE",
+            "protocol": "https",
+            "port": 443,
+            "url": "history.openrights.exchange",
+            "description": "API Node"
+          }
+        ]
+      },
+      {
+        "name": "ORE Testnet",
+        "description": "ORE Testnet",
+        "owner": "AIKON",
+        "chainId": "a6df478d5593b4efb1ea20d13ba8a3efc1364ee0bf7dbd85d8d756831c0e3256",
+        "type": "testnet",
+        "prefix":"ORE",
+        "network": "eos",
+        "endpoints": [
+          {
+            "name": "AIKON ORE Staging",
+            "protocol": "https",
+            "port": 443,
+            "url": "history-staging.openrights.exchange",
+            "description": "API Node"
+          }
+        ]
+      }
+  
+    
+  ]
+  
