@@ -6,10 +6,6 @@
     "type": "git",
     "url": "git://github.com/react-boilerplate/react-boilerplate.git"
   },
-  "engines": {
-    "npm": ">=3",
-    "node": ">=5"
-  },
   "babel": {
     "presets": [
       "env",
@@ -30,12 +26,12 @@
     "preinstall": "npm run npmcheckversion",
     "postinstall": "npm run build:dll",
     "prebuild": "npm run build:clean",
-    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.dev.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build:clean": "rimraf ./build",
     "build:dll": "node ./internals/scripts/dependencies.js",
     "start:dev": "cross-env NODE_ENV=development node server",
     "start:tunnel": "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
-    "start": "npm run build && npm run start:prod",
+    "start": "node server",
     "start:prod": "cross-env PORT=8080 NODE_ENV=production serve ./build",
     "presetup": "npm i chalk shelljs",
     "setup": "node ./internals/scripts/setup.js",
@@ -121,7 +117,9 @@
     "uuid": "^3.3.2",
     "warning": "3.0.0",
     "whatwg-fetch": "2.0.3",
-    "yup": "0.26.7",
+    "yup": "0.26.7"
+  },
+  "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/runtime": "^7.3.1",
@@ -175,7 +173,6 @@
     "null-loader": "0.1.1",
     "offline-plugin": "4.8.1",
     "plop": "1.8.0",
-    "pre-commit": "^1.2.2",
     "prettier": "^1.13.5",
     "prettier-eslint": "^8.8.2",
     "react-addons-test-utils": "^15.6.2",
