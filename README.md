@@ -13,6 +13,9 @@ Now you're ready to rumble!
 ### Deploy to Google Cloud
 
 ```
-gcloud config set project open-rights-exchange
-gcloud -q app deploy app.yaml
+$ npm install
+$ npm run build
+
+$ gcloud config set project open-rights-exchange
+$ gcloud -q app deploy app.yaml
 ```
