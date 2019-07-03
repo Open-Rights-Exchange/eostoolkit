@@ -12,6 +12,8 @@ Now you're ready to rumble!
 
 ### Deploy to Google Cloud
 
+Important: You must build locally before deploying to Google Cloud
+
 ```
 $ npm install
 $ npm run build
